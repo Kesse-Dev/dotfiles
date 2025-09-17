@@ -1,19 +1,16 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
     "position": "bottom",
     "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    //"font-family": "ttf-font-nerd", // Font family
+    
+    // Order of modules
     "modules-left": [
-        "hyprland/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "sway/window"
+        "hyprland/window"
     ],
     "modules-right": [
         "pulseaudio",
@@ -25,22 +22,33 @@
         "tray"
     ],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "3",
+             "4": "4",
+             "5": "5",
+             "6": "6",
+             "7": "7",
+             "8": "8",
+             "9": "9",
+             "10": "10",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }    
+     },
+     "persistent-workspaces": {
+        "DP-1": 5, // 5 workspaces on output DP-1
+        "DP-2": 2, // 2 workspaces on output DP-2
+        "DP-3": 3  // 3 workspaces on output DP-3
+     },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
